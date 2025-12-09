@@ -108,6 +108,10 @@ app.use((err,req,res,next) => {
     res.render("error.ejs" , {err});
 })
 
+app.get('/', (req, res) => {
+  res.redirect('/listings'); // redirect root to /listings
+});
+
 app.listen( 8080 , () => {
     console.log("listening to port" , port);
 })
